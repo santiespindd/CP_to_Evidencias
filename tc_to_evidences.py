@@ -25,8 +25,8 @@ def generar_evidencias():
         return
     
     # Verificar el formato del archivo Excel
-    if "Caso de prueba" not in df.columns or "Pasos" not in df.columns or "Resultado Esperado" not in df.columns:
-        messagebox.showerror("Error", "El formato del Excel no es el correcto. Debe contener las columnas 'Caso de prueba', 'Pasos' y 'Resultado Esperado'.")
+    if "Caso de Prueba" not in df.columns or "Pasos" not in df.columns or "Resultado Esperado" not in df.columns:
+        messagebox.showerror("Error", "El formato del Excel no es el correcto. Debe contener las columnas 'Caso de Prueba', 'Pasos' y 'Resultado Esperado'.")
         return
     
     # Crear un documento Word
@@ -48,15 +48,15 @@ def generar_evidencias():
         subtitle_run = subtitle_paragraph.add_run(subtitle)
         subtitle_run.bold = True
     
-    doc.add_heading(f'Caso de prueba ejecutados', level=1)
+    doc.add_heading(f'Caso de Prueba ejecutados', level=1)
     
     paso = 0
     
-    # Iterar a través de los casos de prueba
+    # Iterar a través de los casos de Prueba
     for index, row in df.iterrows():
-        # Agregar sección para cada caso de prueba
-        if pd.notna(row["Caso de prueba"]) and row["Caso de prueba"] != '':
-            doc.add_heading(f'{row["Caso de prueba"]}', level=2)
+        # Agregar sección para cada caso de Prueba
+        if pd.notna(row["Caso de Prueba"]) and row["Caso de Prueba"] != '':
+            doc.add_heading(f'{row["Caso de Prueba"]}', level=2)
             paso = 1
         doc.add_paragraph(f'Pasos {paso}: {row["Pasos"]}')
         paso += 1
