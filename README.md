@@ -14,7 +14,8 @@ El funcionamiento es el siguiente:
 
 El archivo excel debe contener los siguientes titulos: 
 
-![image](https://github.com/santiespindd/CP_to_Evidencias/assets/45414992/2cf9ded7-27ae-442f-91ae-dd6a4938c80b)
+![image](https://github.com/santiespindd/CP_to_Evidencias/assets/45414992/edf0d13f-7dbe-4a79-87fa-4aab329f9c23)
+
 
 
 El archivo generado tiene el siguiente formato
